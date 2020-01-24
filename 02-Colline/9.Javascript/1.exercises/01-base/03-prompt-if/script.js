@@ -1,0 +1,29 @@
+/* becode/javascript
+ *
+ * /01-base/03-prompt-if/script.js - 1.3: promp & if
+ *
+ * coded by leny@BeCode
+ * started at 26/10/2018
+ */
+
+// NOTE: don't focus on the existing code structure for now.
+// You will have time to focus on it later.
+
+
+
+(() => { 
+   let cake = confirm("Veux tu une part de gateaux ");
+
+   if (cake==true) {
+      if (Math.floor(Math.random() * 2) == 0) {
+         alert("Bonne appetit");
+      } 
+      else {
+         alert("Tu en n'avais vraiment envie!");
+      }
+   } 
+   else {
+      alert("Du gateaux ca ne se refuse pas!");
+   }
+    // your code here
+})();

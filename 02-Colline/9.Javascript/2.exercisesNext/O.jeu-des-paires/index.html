@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Matching Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Signimg/favicon.png" 
+        <link rel="apple-touch-icon" href="./Signimg/apple-touch-icon.png" />
+                    
+
+
+
+<!--todo                                 |
+<!--todo                                 |
+<!--todo                     \           |           /
+<!--todo                      \  LET     J    GO    /
+<!--todo                       \        _W_        /
+<!--todo                        \    _ |8K8| _    /
+<!--todo                         \.-"  |8E8|  "-./
+<!--todo          `-._          .'_____|8L8|_____`.          _.-'
+<!--todo              `-._    .' |8888888L8888888| `.    _.-'
+<!--todo                  `-./ | |8888888E8888888|   \,-'
+<!--todo                    /__|__"""""|8R8|""""" _|_ \
+<!--?                      |   |  _..::|888|::.._  |   |
+<!--?             ---------|..-|:::::::|818|:::::::|-..|---------
+<!--?                    .-::::|:::::::|8.8|:::::::|::::-.
+<!--*                  .:::::::|-::-::-|818|-::-::-|:::::::.
+<!--*                .:::::::::::::::::|888|:::::::::::::::::.
+<!--*               :::::::::::::::::::|888|:::::::::::::::::::
+<!--*             .::::::::::::::::::::|888|::::::::::::::::::::.
+<!--*            .::::::::::::::::::::::"""::::::::::::::::::::::.
+
+-->
+</head>
+
+<body>
+    <header>
+        <h1>Memory Game <span></h1>
+            <span class="tool-tip">
+                <button>
+                    <svg width="154.19375px" height="122.021240234375px" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="172.903125 13.9893798828125 154.19375 122.021240234375" style="background: rgba(0, 0, 0, 0);
+                        " preserveAspectRatio="xMidYMid">
+                        <defs>
+                            <filter id="editing-extrude-glow">
+                                <feFlood flood-color="#333333" result="flood-1"></feFlood>
+                                <feMorphology operator="erode" radius="1" in="SourceAlpha" result="erode"></feMorphology>
+                                <feComposite operator="in" in="flood-1" in2="erode" result="comp1"></feComposite>
+                                <feConvolveMatrix order="3,3" divisor="1" in="comp1" result="convolve" kernelMatrix="0 0 0 1 1 1 0 0 0"></feConvolveMatrix>
+                                <feOffset dx="-3" dy="0" in="convolve" result="extrude"></feOffset>
+                                <feComposite operator="in" in="flood-1" in2="extrude" result="comp-extrude"></feComposite>
+                                <feFlood flood-color="#000000" result="flood-2"></feFlood>
+                                <feComposite operator="in" in="flood-2" in2="SourceAlpha" result="comp2"></feComposite>
+                                <feMorphology operator="dilate" radius="1" in="comp2" result="dilate"></feMorphology>
+                                <feOffset dx="-4.5" dy="0" in="dilate" result="offset"></feOffset>
+                                <feGaussianBlur in="offset" stdDeviation="5.8" result="blur"></feGaussianBlur>
+                                <feComponentTransfer in="blur" result="shadow">
+                                    <feFuncA type="linear" slope="0.8" intercept="-0.2"></feFuncA>
+                                </feComponentTransfer>
+                                <feMerge>
+                                    <feMergeNode in="shadow"></feMergeNode>
+                                    <feMergeNode in="comp-extrude"></feMergeNode>
+                                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <g filter="url(#editing-extrude-glow)"><g transform="translate(206.8203091621399, 102.80218696594238)">
+                            <path d="M-6.98 8.83L-6.98 8.83L-6.98 8.83Q-3.71 8.45-1.66 4.22L-1.66 4.22L-1.66 4.22Q0.45-0.06 2.37-9.92L2.37-9.92L8.58-42.24L22.46-42.24L16.26-9.92L16.26-9.92Q13.89 2.62 9.98 7.55L9.98 7.55L9.98 7.55Q7.94 10.11 5.34 11.14L5.34 11.14L5.34 11.14Q2.75 12.16-0.06 12.16L-0.06 12.16L-0.06 12.16Q-2.88 12.16-4.70 11.14L-4.70 11.14L-4.70 11.14Q-6.53 10.11-6.98 8.83ZM25.47-39.68L25.47-39.68L25.47-39.68Q26.37-41.47 28.32-42.46L28.32-42.46L28.32-42.46Q30.27-43.46 32.96-43.46L32.96-43.46L32.96-43.46Q37.18-43.46 39.71-40.42L39.71-40.42L39.71-40.42Q42.24-37.38 42.24-30.72L42.24-30.72L42.24-7.87L56.90-42.18L64.45-42.18L66.18-9.79L65.98-7.94L81.22-42.18L89.98-42.18L69.50 0L55.87 0L54.59-19.46L46.14 0L30.72 0L28.80-30.72L28.80-30.72Q28.61-34.18 27.68-36.45L27.68-36.45L27.68-36.45Q26.75-38.72 25.47-39.68Z" fill="#eb6c6c">
+                            </path>
+                        </g>
+                        </g>
+                        <style>text {
+                            font-size: 64px;
+                            font-family: Arial Black;
+                            dominant-baseline: central;
+                            text-anchor: middle;
+                        }
+                        </style>
+                    </svg>
+                </button>
+            </span>
+    </header>
+    <main>
+        <section>
+            <div class="game-status-details">
+                <div class="rating">
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                </div>
+                <span class="move-counter" id="moveCounter"></span>
+                <span class="timer" id="timer">0 mins 0 secs</span>
+                <button class="restart-btn" id="restartBtn" onClick="startGame()" aria-label="restart game">↻</button>
+            </div>
+            <table class="game-board">
+                <tbody class="game-grid">
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/1.jpg" alt="cake1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/2.jpg" alt="cake2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/3.jpg" alt="cake3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/4.jpg" alt="cake4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/5.jpg" alt="cake5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/6.jpg" alt="cake6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/7.jpg" alt="cake7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/8.jpg" alt="cake8">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/1.jpg" alt="cake1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/2.jpg" alt="cake2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/3.jpg" alt="cake3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/4.jpg" alt="cake4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/5.jpg" alt="cake5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/6.jpg" alt="cake6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/7.jpg" alt="cake7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/8.jpg" alt="cake8">
+                        </td>
+                    </tr>
+                </tbody>               
+            </table>
+            <div class="restart-button-div">
+                <button class="restart-button brown-button" id="restartButton" onClick="startGame()">Restart ↻</button>
+            </div>
+        </section>
+        
+        <!--Modal on game over -->
+
+<!--? End of my Footer signature-->
+<footer>Design <a href="https://www.facebook.com/joffrey.donotbeafraid" target="_blank">JWSunSh1ne</a> //
+    Dev <a href="https://www.linkedin.com/in/joffrey-weertz-sunsh1ne/" target="_blank">Linkedin </a><br />
+    <a href="https://github.com/jSUNSH1NEw" target="_blank">GitHub</a> 
+    <p>&copy;2k19 JW.Sunsh1n3</p>
+</footer>
+<!--? End of my Footer signature-->
+
+    <script src="main.js"></script>
+</body>
+</html>

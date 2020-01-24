@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="eu">
+    <!--? Start of my head signature-->
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <meta name="author" content="Sunshine">
+        <meta name="organization" content="BeCode">
+
+<!--todo                                 |
+<!--todo                                 |
+<!--todo                     \           |           /
+<!--todo                      \  LET     J    GO    /
+<!--todo                       \        _W_        /
+<!--todo                        \    _ |8K8| _    /
+<!--todo                         \.-"  |8E8|  "-./
+<!--todo          `-._          .'_____|8L8|_____`.          _.-'
+<!--todo              `-._    .' |8888888L8888888| `.    _.-'
+<!--todo                  `-./ | |8888888E8888888|   \,-'
+<!--todo                    /__|__"""""|8R8|""""" _|_ \
+<!--?                      |   |  _..::|888|::.._  |   |
+<!--?             ---------|..-|:::::::|818|:::::::|-..|---------
+<!--?                    .-::::|:::::::|8.8|:::::::|::::-.
+<!--*                  .:::::::|-::-::-|818|-::-::-|:::::::.
+<!--*                .:::::::::::::::::|888|:::::::::::::::::.
+<!--*               :::::::::::::::::::|888|:::::::::::::::::::
+<!--*             .::::::::::::::::::::|888|::::::::::::::::::::.
+<!--*            .::::::::::::::::::::::"""::::::::::::::::::::::.
+
+
+--> 
+
+
+
+<!--? my font awesome link add google fonts-->
+        <script src="https://kit.fontawesome.com/126bbe9047.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>UN TITRE AU HASARD</title>
+<!--? My fontawesome link and add google fonts -->
+</head>
+<!--? end of my head signature-->
+
+
+<!--? Start of my body-->
+<body>
+    <div class="container">
+        <h1 class="text-center">The Hangman Game</h1>
+        <div class="float-right">Wrong guesses : <span id ="mistakes">0</span> <span id="maxWrong"></span></div>
+        <div class="text-center">
+            <img id="hangmanPic" src="./images/0.jpg" alt="Thehangman">
+            <p>Guess the programming language : </p>
+            <p id="wordSpotlight">The word to be guesses goes here</p>
+            <div id="keyboard"></div>
+            <button id="key" class="btn btn-info" onClick="reset()" onkeypress="keyPressed()">Reset</button>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<!--? End of my Footer signature-->
+    <footer>Design <a href="https://www.facebook.com/joffrey.donotbeafraid" target="_blank">JWSunSh1ne</a> //
+        Dev <a href="https://www.linkedin.com/in/joffrey-weertz-sunsh1ne/" target="_blank">Linkedin </a><br />
+        <a href="https://github.com/jSUNSH1NEw" target="_blank">GitHub</a> 
+        <p>&copy;2k19 JW.Sunsh1n3</p>
+</footer>
+<!--? End of my Footer signature-->
+
+<script src="./JS/hangman.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+<!--? End of my body-->
+</html>
