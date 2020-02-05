@@ -20,7 +20,6 @@
 
     if (date < 2020){
         greeting = "Good Morning";
-        alert date
     
     }
     else if (hourNow < 17.30){
