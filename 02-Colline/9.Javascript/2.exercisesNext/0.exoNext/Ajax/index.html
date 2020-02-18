@@ -51,6 +51,10 @@
         <script src="https://kit.fontawesome.com/126bbe9047.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/signature.css">
+        <link rel="stylesheet" href="./css/style.css">
+    <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
+    <script type='text/javascript' src='./js/jquery.particleground.min.js'></script>
+    <script type='text/javascript' src='./js/demo.js'></script>
         <title>UN TITRE AU HASARD</title>
 <!--? My fontawesome link and add google fonts -->
 </head>
@@ -63,19 +67,23 @@
     <div class="header">
 
 <!--! Content before waves-->
-        <div class="inner-header flex">
-        <h1></h1>
-        </div>
-        
+<div id="particles">
+<div class="inner-header flex">
+    <h1></h1>
+    </div>
+    
 <!--! Waves Container-->
-        <div>
-            <section id="container">
+        
+            <div class="intro">
+            <div id="container">
                 <blockquote id  = "quote"></blockquote>
                 <figcaption id="photoformater">
                     <img src = "" alt = "picture of the author" id = "photo">
                 </figcaption>
                 <h1 id="author"></h1>
             </section>
+          </div>
+        </div>
 
 
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -84,9 +92,9 @@
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,258,55,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(2,255,185,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25,55,255,0.3)" />
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
             </g>
             </svg>
@@ -123,7 +131,6 @@
 
 
 <script src="./js/scroll.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="./js/ajax.js"></script>

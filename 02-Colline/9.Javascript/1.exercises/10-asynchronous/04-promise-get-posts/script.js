@@ -10,5 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let promise = window.lib.getPosts();
+        promise.then((value) => { console.log(value) });
 })();
